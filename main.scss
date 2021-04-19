@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(19deg, #1952f9 0%, #B721FF 84%);
+    position:relative;
+}
+
+header::before{
+    content: "";
+    position: absolute;
+    height: 60rem;
+    width: 60rem;
+    background-image: url(images/man.png);
+    background-size: 100% 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.navbar{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar .logo a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+}
+
+.navbar .logo a::before{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 0.1px;
+    background-color: white;
+    border: .3rem solid white;
+    top: 10%;
+    bottom: 100%;
+    left: 7.5%;
+
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+    margin: 0 3rem;
+    text-transform: capitalize;
+    position: relative;
+}
+.menu ul li a::before{
+    content: "";
+    position: absolute;
+    background-color: #5dade2;
+    width: 0%;
+    height: .3rem;
+    top: 100%;
+    transition: all 0.3s linear;
+}
+
+.active{
+    color: #5dade2 !important;
+}
+
+.menu ul li a:hover{
+    color: #5dade2;
+}
+
+.active,.menu ul li a:hover::before{
+    width: 100%;
+    color: #5dade2 !important;
+}
+
+.menu_btn a{
+    color: white;
+    font-size: 2rem;
+    font-weight: lighter;
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: #d465ef;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+}
+
+.menu_btn a:hover{
+    background-image: linear-gradient(to bottom,#615cf6 0%, #d465ef 100%);
+}
+
+.content_sec{
+    // width: 50rem;
+    // height: 50rem;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.content_sec h1{
+    font-weight: bold;
+    color:white;
+    font-size: 6rem;
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+}
+
+.content_sec h2{
+    font-weight: lighter;
+    color: white;
+    font-size: 2.3rem;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.content_sec h2::before{
+    content: "";
+    position: absolute;
+    width: 7.4rem;
+    height: auto;
+    background-color: white;
+    border: .2rem solid white;
+    left: 3rem;
+    bottom: 42%;
+    // border: .3rem solid white;
+}
+
+.social_sec{
+    position: absolute;
+    bottom: 30%;
+    right: 10%;
+
+}
+
+.social_sec .icon{
+    font-size: 2rem;
+    background-image: linear-gradient(to bottom,#615cf6 0%, #d465ef 100%);
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social_sec .icon i{
+    color: white;
+}
+
+.social_sec .icon:hover{
+    background-image: linear-gradient(to bottom, #d465ef 0%, #615cf6 100%);
+}
+
+.social_sec .icon:nth-child(even){
+    margin: 1.5rem 0;
+}
+
+figure{
+    position: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+figure img{
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    bottom: 0%;
+    left:55%;
+    overflow: hidden;
+}
